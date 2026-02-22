@@ -12,31 +12,73 @@ hidemeta: true
 <div class="research-area">
 
 ### 📈 Quantitative Trading & Market Microstructure
+<span class="research-label">Active Research</span>
 
-Building and optimizing high-frequency trading models using tick-level data. My work involves latency analysis, order book dynamics, and CTA strategy design with systematic statistical approaches to trading data.
+Building and optimizing high-frequency trading models using tick-level data.
 
+- Order book dynamics and latency analysis in crypto markets
+- CTA strategy design with systematic statistical approaches
+- Microstructure feature extraction for alpha signal generation
+
+<div class="tech-tags">
+<span class="tech-tag">HFT</span>
+<span class="tech-tag">Order Book</span>
+<span class="tech-tag">Tick Data</span>
+<span class="tech-tag">CTA</span>
+</div>
 </div>
 
 <div class="research-area">
 
 ### 📊 Options Pricing & Derivatives
+<span class="research-label">Active Research</span>
 
-Researching and implementing exotic options pricing models in digital asset markets. I have developed trading strategies that leverage pricing inefficiencies, achieving strong performance in live trading environments.
+Pricing and trading exotic options in digital asset markets.
 
+- Exotic options pricing models adapted for crypto volatility regimes
+- Strategy development exploiting derivatives pricing inefficiencies
+- Volatility surface modeling and Greeks computation
+
+<div class="tech-tags">
+<span class="tech-tag">Exotic Options</span>
+<span class="tech-tag">Black-Scholes</span>
+<span class="tech-tag">Volatility</span>
+<span class="tech-tag">Crypto Derivatives</span>
+</div>
 </div>
 
 <div class="research-area">
 
 ### 🔗 Blockchain Economics & Game Theory
 
-Studying economic incentive structures in blockchain systems through game-theoretic frameworks. Topics include data factor market design, Layer-2 scaling solution analysis (verifier's dilemma), and welfare implications of data property rights allocation using Bayesian game models.
+Game-theoretic analysis of economic incentive structures in blockchain systems.
 
+- **Verifier's Dilemma** — Analyzing incentive problems in Layer-2 scaling solutions
+- **Data Factor Markets** — Bayesian game framework for property rights allocation
+- Welfare implications of mechanism design in decentralized systems
+
+<div class="tech-tags">
+<span class="tech-tag">Bayesian Games</span>
+<span class="tech-tag">Mechanism Design</span>
+<span class="tech-tag">Layer-2</span>
+<span class="tech-tag">Data Markets</span>
+</div>
 </div>
 
 <div class="research-area">
 
 ### 🔮 Prediction Markets & Alternative Data
 
-Exploring alpha signals in prediction markets and utilizing on-chain data and alternative data sources for quantitative research and risk management.
+Exploring alpha signals beyond traditional market data.
 
+- Alpha generation from prediction market pricing dynamics
+- On-chain data analysis for quantitative research signals
+- Alternative data integration for portfolio risk management
+
+<div class="tech-tags">
+<span class="tech-tag">Prediction Markets</span>
+<span class="tech-tag">On-chain Data</span>
+<span class="tech-tag">Alternative Data</span>
+<span class="tech-tag">Alpha Research</span>
+</div>
 </div>

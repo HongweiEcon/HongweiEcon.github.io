@@ -168,8 +168,9 @@ body {
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 24px 28px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -191,11 +192,67 @@ body {
 .project-card .project-meta {
     color: var(--secondary);
     font-size: 0.88rem;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .project-card p {
     margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* Project image */
+.project-card .project-img {
+    margin: 16px 0 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.project-card .project-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card .project-img:hover img {
+    transform: scale(1.02);
+}
+
+/* Project highlights list */
+.project-card ul {
+    margin: 8px 0 12px;
+    padding-left: 20px;
+}
+
+.project-card ul li {
+    margin-bottom: 4px;
+    line-height: 1.6;
+    color: var(--content);
+}
+
+/* Project links */
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--accent) !important;
+    border: none !important;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.project-links a:hover {
+    opacity: 0.7;
+    color: var(--accent) !important;
 }
 
 /* --- Tech Tags --- */
@@ -287,8 +344,8 @@ html {
     background: var(--theme);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
     border-left: 4px solid var(--accent);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -300,8 +357,36 @@ html {
 
 .research-area h3 {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.research-area p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.research-area ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.research-area ul li {
+    margin-bottom: 4px;
+    line-height: 1.6;
+}
+
+/* Research sub-label */
+.research-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* Remove h2 left border inside cards to avoid double border */
