@@ -1,0 +1,93 @@
+baseURL: "https://hongweizhong.cn/"
+title: "Hongwei Zhong"
+theme: ["PaperMod"]
+languageCode: en-us
+defaultContentLanguage: en
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  description: "Quantitative Researcher | NYU MSQE"
+  author: "Hongwei Zhong"
+  keywords: ["quantitative research", "finance", "trading", "NYU"]
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  defaultTheme: auto
+  disableThemeToggle: false
+  disableSpecial1stPost: true
+
+  profileMode:
+    enabled: true
+    title: "Hongwei Zhong"
+    subtitle: >
+      Quantitative Researcher at [Kronos Research](https://kronosresearch.com/).
+      Master in Quantitative Economics at [NYU](https://as.nyu.edu/departments/econ.html).
+      Interested in quantitative trading, market microstructure, derivatives pricing, and blockchain economics.
+    imageUrl: "profile.png"
+    imageWidth: 160
+    imageHeight: 160
+    imageTitle: "Hongwei Zhong"
+    buttons:
+      - name: CV
+        url: /cv/
+      - name: Research
+        url: /research/
+      - name: Projects
+        url: /projects/
+
+  socialIcons:
+    - name: email
+      url: "mailto:hongwei.zhong@nyu.edu"
+    - name: github
+      url: "https://github.com/HongweiEcon"
+    - name: linkedin
+      url: "https://linkedin.com/in/hongwei-zhong"
+
+  cover:
+    hiddenInList: true
+    hiddenInSingle: true
+
+  assets:
+    favicon: "/favicon.ico"
+
+menu:
+  main:
+    - identifier: cv
+      name: CV
+      url: /cv/
+      weight: 10
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
