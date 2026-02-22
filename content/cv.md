@@ -7,7 +7,7 @@ ShowReadingTime: false
 hidemeta: true
 ---
 
-## Education
+## 🎓 Education
 
 **New York University** — New York, U.S.A.
 *Master in Quantitative Economics* | Sep 2025 – Present
@@ -21,7 +21,7 @@ hidemeta: true
 
 ---
 
-## Work Experience
+## 💼 Work Experience
 
 **Kronos Research** — Remote
 *Quantitative Researcher (Internship)* | Dec 2025 – Present
@@ -47,7 +47,7 @@ hidemeta: true
 
 ---
 
-## Leadership & Activities
+## 🌍 Leadership & Activities
 
 **Summer Program on Behavioral Economics** — University of Oxford, U.K.
 *Team Leader* | Jul 2022 – Aug 2022
@@ -56,7 +56,7 @@ hidemeta: true
 
 ---
 
-## Selected Honors & Awards
+## 🏆 Selected Honors & Awards
 
 **Best Graduation Thesis Award** — Central University of Finance and Economics, May 2024
 - *Verifier's Dilemma: A Game-Theoretic Analysis of Blockchain Layer-2 Scaling Solutions*
@@ -67,12 +67,33 @@ hidemeta: true
 
 ---
 
-## Skills, Languages & Interests
+## 🛠 Skills & Languages
 
-- **Languages:** Chinese (Native), English (GRE 328), Japanese (Jtest 698)
-- **Programming:** Python, C++, SQL, R, Git, LaTeX
-- **Interests:** Swimming, Anime, Reading Non-fiction, R&B, OST and Jazz Music
+**Languages**
+
+<div class="skill-tags">
+<span class="skill-tag">Chinese (Native)</span>
+<span class="skill-tag">English (GRE 328)</span>
+<span class="skill-tag">Japanese (Jtest 698)</span>
+</div>
+
+**Programming**
+
+<div class="skill-tags">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">C++</span>
+<span class="skill-tag">SQL</span>
+<span class="skill-tag">R</span>
+<span class="skill-tag">Git</span>
+<span class="skill-tag">LaTeX</span>
+</div>
 
 ---
 
-📄 [Download CV (PDF)](/files/CV-Hongwei%20Zhong.pdf)
+## 🎵 Interests
+
+Swimming · Anime · Reading Non-fiction · R&B · OST and Jazz Music
+
+---
+
+<a href="/files/CV-Hongwei%20Zhong.pdf" class="cv-download">📄 Download CV (PDF)</a>

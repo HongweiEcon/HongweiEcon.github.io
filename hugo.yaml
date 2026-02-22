@@ -13,7 +13,7 @@ minify:
 
 params:
   env: production
-  description: "Quantitative Researcher | NYU MSQE"
+  description: "Quantitative Researcher | NYU"
   author: "Hongwei Zhong"
   keywords: ["quantitative research", "finance", "trading", "NYU"]
 
@@ -32,12 +32,12 @@ params:
     enabled: true
     title: "Hongwei Zhong"
     subtitle: >
-      Quantitative Researcher at [Kronos Research](https://kronosresearch.com/).
-      Master in Quantitative Economics at [NYU](https://as.nyu.edu/departments/econ.html).
-      Interested in quantitative trading, market microstructure, derivatives pricing, and blockchain economics.
+      Quantitative Researcher at [Kronos Research](https://kronosresearch.com/)<br>
+      Master in Quantitative Economics at [NYU](https://as.nyu.edu/departments/econ.html)<br>
+      Quantitative Trading · Derivatives Pricing · Blockchain Economics
     imageUrl: "profile.png"
-    imageWidth: 160
-    imageHeight: 160
+    imageWidth: 200
+    imageHeight: 200
     imageTitle: "Hongwei Zhong"
     buttons:
       - name: CV
@@ -80,6 +80,10 @@ menu:
       name: Blog
       url: /posts/
       weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
 
 outputs:
   home:

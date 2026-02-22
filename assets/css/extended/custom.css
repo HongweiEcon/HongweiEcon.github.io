@@ -1,0 +1,369 @@
+/* ============================================
+   Personal Website Custom Styles
+   Theme: Professional — Quantitative Finance
+   ============================================ */
+
+/* --- Typography --- */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+/* --- Color Accents --- */
+:root {
+    --accent: #2b6cb0;
+    --accent-dark: #1a365d;
+    --accent-light: #4299e1;
+    --accent-bg: rgba(43, 108, 176, 0.08);
+    --tag-bg: #edf2f7;
+    --tag-text: #2d3748;
+    --subtle-bg: #f7fafc;
+    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+:root[data-theme="dark"] {
+    --accent: #63b3ed;
+    --accent-dark: #90cdf4;
+    --accent-light: #4299e1;
+    --accent-bg: rgba(99, 179, 237, 0.1);
+    --tag-bg: rgba(99, 179, 237, 0.15);
+    --tag-text: #e2e8f0;
+    --subtle-bg: #1e2028;
+    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Layout Width --- */
+:root {
+    --main-width: 860px;
+    --nav-width: 1100px;
+}
+
+/* --- Background: Subtle gradient for visual depth --- */
+body {
+    background: linear-gradient(160deg, var(--theme) 0%, var(--subtle-bg) 50%, var(--theme) 100%);
+    background-attachment: fixed;
+}
+
+/* --- Links (content pages) --- */
+.post-content a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--secondary);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.post-content a:hover {
+    color: var(--accent);
+    border-bottom-style: solid;
+    border-bottom-color: var(--accent);
+}
+
+/* --- Links in profile subtitle --- */
+.profile .profile_inner > span a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--secondary);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.profile .profile_inner > span a:hover {
+    color: var(--accent);
+    border-bottom-style: solid;
+    border-bottom-color: var(--accent);
+}
+
+/* --- Profile Section (Homepage) --- */
+.profile img {
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
+}
+
+.profile h1 {
+    margin-top: 16px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Profile subtitle: clean line-by-line */
+.profile .profile_inner > span {
+    line-height: 2;
+    font-size: 0.95rem;
+    color: var(--secondary);
+    max-width: 520px;
+    display: inline-block;
+}
+
+/* --- Homepage Buttons: Minimal outline style --- */
+.profile .buttons {
+    margin-top: 8px;
+}
+
+.profile .buttons .button {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 6px;
+    padding: 7px 24px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.profile .buttons .button:hover {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.profile .buttons .button .button-inner {
+    color: inherit;
+}
+
+/* --- Main Content Area --- */
+.main {
+    min-height: 70vh;
+}
+
+/* --- Post/Page content with subtle card background --- */
+.post-single .post-content {
+    background: var(--entry);
+    border-radius: 12px;
+    padding: 32px 36px;
+    box-shadow: var(--card-shadow);
+    margin-top: 16px;
+}
+
+/* --- Section Headings with Left Border --- */
+.post-content h2 {
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    margin-top: 2em;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* First h2 doesn't need extra top margin inside card */
+.post-content h2:first-child {
+    margin-top: 0;
+}
+
+/* --- Horizontal Rules (Gradient Fade) --- */
+.post-content hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, var(--accent), transparent);
+    margin: 2em 0;
+}
+
+/* --- Project Cards --- */
+.project-card {
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] .project-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.project-card .project-meta {
+    color: var(--secondary);
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 12px;
+}
+
+/* --- Tech Tags --- */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 3px 10px;
+    border-radius: 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* --- Skill Tags (CV page) --- */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--accent);
+}
+
+/* --- CV Download Button --- */
+.cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--accent) !important;
+    padding: 9px 22px;
+    border-radius: 6px;
+    border: 1.5px solid var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: 16px;
+}
+
+.cv-download:hover {
+    background: var(--accent);
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.25);
+}
+
+/* --- Social Icons --- */
+.social-icons a {
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Smooth scroll --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Nav --- */
+.nav {
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--accent) !important;
+}
+
+/* --- Research page cards --- */
+.research-area {
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-area:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+}
+
+.research-area h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Remove h2 left border inside cards to avoid double border */
+.research-area h2,
+.project-card h2,
+.project-card h3 {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* --- Page intro text --- */
+.page-intro {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 2em;
+    line-height: 1.7;
+}
+
+/* --- Footer styling --- */
+.footer {
+    opacity: 0.8;
+}
+
+/* --- Responsive: Mobile --- */
+@media (max-width: 768px) {
+    .post-single .post-content {
+        padding: 20px 18px;
+        border-radius: 8px;
+    }
+
+    .project-card {
+        padding: 18px 16px;
+    }
+
+    .research-area {
+        padding: 16px 14px;
+    }
+
+    .profile .buttons .button {
+        padding: 6px 18px;
+        font-size: 0.85rem;
+    }
+
+    .profile .profile_inner > span {
+        font-size: 0.88rem;
+        padding: 0 12px;
+        line-height: 1.9;
+    }
+
+    .skill-tags {
+        gap: 6px;
+    }
+
+    .skill-tag {
+        padding: 3px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* --- Responsive: Large screens --- */
+@media (min-width: 1200px) {
+    :root {
+        --main-width: 900px;
+    }
+}
