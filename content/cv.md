@@ -10,49 +10,40 @@ hidemeta: true
 ## 🎓 Education
 
 **New York University** — New York, U.S.A.
-*Master in Quantitative Economics* | Sep 2025 – Present
-- GPA: 3.83 / 4.0
-- Courses: Advanced Mathematical Economics, Stochastic Calculus and Asset Pricing, Financial Computing (C++), Machine Learning
+*Master in Quantitative Economics* | Sep 2025 – Dec 2026
+- Courses: Stochastic Calculus and Asset Pricing, Financial Computing (C++), Machine Learning
 
-**Southwestern University of Finance and Economics** — Chengdu, China
-*Bachelor of Economics in Economics (minor in Finance)* | Sep 2017 – Jun 2021
-- GPA: 3.89 / 4.0, Top 5% of the class
-- Courses: Data Structures and Algorithms, Game Theory, Python Programming, Operational Research, Database System
+**Central University of Finance and Economics** — Beijing, China
+*Master of Mathematics and Economics* | Sep 2021 – Jun 2024
+- Honors: Academic Scholarships, Best Graduation Thesis
+- Courses: Advanced Econometrics, Advanced Financial Theory, Optimization Theory
 
 ---
 
 ## 💼 Work Experience
 
+**QED Trading** — Florida, U.S.A.
+*Quantitative Research Associate Intern* | May 2026 – Present
+- Owned engineering improvements to quantitative research pipelines, including asset-history handling, missing-data handling, strategy configuration updates, and test expansion for reliable backtests.
+- Developed modular Python components for a daily crypto ML signal framework, integrating boosting models, cross-asset features, diagnostics, and signal-accuracy evaluation.
+- Established an AI-assisted development workflow using structured prompts, iterative code review, failure-mode analysis, and test refinement to ship maintainable research-engineering changes.
+
 **Kronos Research** — Remote
-*Quantitative Researcher (Internship)* | Dec 2025 – Present
-- Exploring alpha signals in Prediction markets.
-- Developing high-frequency trading systems, enabling data recording, replaying, backtesting, and paper/live trading.
-- Utilizing on-chain data and alternative data sources for quantitative research and risk management.
+*Quantitative Researcher Intern* | Dec 2025 – Feb 2026
+- Researched and validated alpha signals in prediction markets, combining market microstructure analysis with systematic performance diagnostics.
+- Developed a high-frequency trading system in Rust/Python, supporting data recording, replay, backtesting, and paper/live trading.
+- Integrated on-chain and alternative data pipelines to enhance signal generation and risk monitoring.
 
 **Algobeats** — Chengdu, China
 *Quantitative Researcher (Full-time)* | May 2024 – Aug 2025
-- Researched and implemented exotic options pricing models in digital asset markets; developed a trading strategy achieving over 200% annualized return in live trading environment.
-- Built and optimized high-frequency trading models using tick-level data, including latency and microstructure analysis.
-- Developed a CTA strategy backtesting framework and conducted systematic trading-data statistical analysis to support strategy design.
+- Modeled and priced Polymarket products using binary-option pricing frameworks; developed and monitored trading strategies based on valuation and risk signals.
+- Built a systematic signal-testing and strategy-research framework on the firm's high-frequency trading system, supporting tick-level analysis and execution diagnostics.
+- Contributed to backtesting and paper-trading frameworks for medium-frequency cross-sectional and time-series strategies, enabling iterative strategy validation.
 
 **Renmin University of China** — Beijing, China
-*Researcher – National R&D Project of China on "Data Factor Market Based on Blockchain Technology"* | Jul 2023 – Mar 2024
-- Led literature review on blockchain and data factor markets; synthesized key macroeconomic modeling paradigms.
-- Proposed a Bayesian game framework; found welfare gains from allocating data property rights to high-value-growth entities.
-
-**Tsinghua University** — Beijing, China
-*Data Analyst – Hydrogen-Powered Vehicle Big Data Analysis and Visualization* | Jun 2021 – Aug 2021
-- Migrated vehicle simulation models from MATLAB to Python; integrated into a real-time analysis platform.
-- Processed sensor data using Hadoop and conducted statistical visualization with Python.
-
----
-
-## 🌍 Leadership & Activities
-
-**Summer Program on Behavioral Economics** — University of Oxford, U.K.
-*Team Leader* | Jul 2022 – Aug 2022
-- Completed coursework on Behavioral Economics and Game Theory with A+ grade.
-- Designed a theoretical model and experimental framework on belief updating in Bayesian games.
+*Research Assistant* | Jul 2023 – Mar 2024
+- Led literature review on blockchain and data factor markets, synthesizing macroeconomic and mechanism-design models for research stakeholders.
+- Proposed a Bayesian game framework to analyze data-property-right allocation and evaluate welfare effects under heterogeneous growth assumptions.
 
 ---
 
@@ -84,16 +75,18 @@ hidemeta: true
 <span class="skill-tag">C++</span>
 <span class="skill-tag">SQL</span>
 <span class="skill-tag">R</span>
+<span class="skill-tag">AWS</span>
+<span class="skill-tag">Docker</span>
 <span class="skill-tag">Git</span>
-<span class="skill-tag">LaTeX</span>
+<span class="skill-tag">LLM-assisted Development</span>
 </div>
 
 ---
 
 ## 🎵 Interests
 
-Swimming · Anime · Reading Non-fiction · R&B · OST and Jazz Music
+Swimming · Reading Non-fiction · Jazz Music
 
 ---
 
-<a href="/files/CV-Hongwei%20Zhong.pdf" class="cv-download">📄 Download CV (PDF)</a>
+<a href="/files/cv-quant.pdf" class="cv-download">📄 Download CV (PDF)</a>

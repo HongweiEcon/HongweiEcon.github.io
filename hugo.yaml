@@ -13,9 +13,9 @@ minify:
 
 params:
   env: production
-  description: "Quantitative Researcher | NYU"
+  description: "Quantitative Research Associate Intern | QED Trading | NYU"
   author: "Hongwei Zhong"
-  keywords: ["quantitative research", "finance", "trading", "NYU"]
+  keywords: ["quantitative research", "crypto", "machine learning", "trading", "NYU"]
 
   ShowReadingTime: false
   ShowShareButtons: false
@@ -30,11 +30,11 @@ params:
 
   profileMode:
     enabled: true
-    title: "Hongwei Zhong"
+    title: "Hongwei Zhong (钟鸿蔚)"
     subtitle: >
-      Quantitative Researcher at [Kronos Research](https://kronosresearch.com/)<br>
+      Quantitative Research Associate Intern at QED Trading<br>
       Master in Quantitative Economics at [NYU](https://as.nyu.edu/departments/econ.html)<br>
-      Quantitative Trading · Derivatives Pricing · Blockchain Economics
+      Crypto ML Signals · Systematic Trading · Research Engineering
     imageUrl: "profile.png"
     imageWidth: 200
     imageHeight: 200
@@ -76,10 +76,6 @@ menu:
       name: Projects
       url: /projects/
       weight: 30
-    - identifier: blog
-      name: Blog
-      url: /posts/
-      weight: 40
     - identifier: search
       name: Search
       url: /search/

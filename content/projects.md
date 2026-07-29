@@ -7,71 +7,100 @@ ShowReadingTime: false
 hidemeta: true
 ---
 
-<p class="page-intro">Selected projects from my professional experience in quantitative research and trading.</p>
+<p class="page-intro">Selected projects from my quantitative research, crypto trading, and research-engineering work.</p>
 
 <div class="project-card">
 
-### High-Frequency Trading System
-<div class="project-meta">Kronos Research · Dec 2025 – Present</div>
+### Daily Crypto ML Signal Framework
+<div class="project-meta">QED Trading · May 2026 – Present</div>
 
-Building a full-stack HFT infrastructure for prediction markets from scratch.
+Modular research framework for daily crypto signals and model diagnostics.
 
-- Real-time data recording and historical data replaying engine
-- Strategy backtesting framework with paper/live trading execution
-- On-chain data pipelines and alternative data integration for alpha research
-
-<!-- Replace the line below with your actual image when ready -->
-<!-- <div class="project-img"><img src="/images/hft-architecture.png" alt="HFT System Architecture"></div> -->
+- Integrated boosting models, cross-asset features, diagnostics, and signal-accuracy evaluation
+- Improved quantitative research pipelines for asset histories, missing-data handling, and reliable backtests
+- Expanded tests and strategy configuration coverage for maintainable research iteration
 
 <div class="tech-tags">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Machine Learning</span>
+<span class="tech-tag">Crypto</span>
+<span class="tech-tag">Backtesting</span>
+</div>
+</div>
+
+<div class="project-card">
+
+### AI-assisted Research Engineering Workflow
+<div class="project-meta">QED Trading · May 2026 – Present</div>
+
+Structured development workflow for shipping robust quantitative research code.
+
+- Used structured prompts, iterative code review, and failure-mode analysis for research-engineering tasks
+- Refined tests alongside implementation changes to catch data and strategy edge cases
+- Applied the workflow to pipeline fixes, model components, and configuration updates
+
+<div class="tech-tags">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Testing</span>
+<span class="tech-tag">Code Review</span>
+<span class="tech-tag">LLM-assisted Development</span>
+</div>
+</div>
+
+<div class="project-card">
+
+### Prediction-market HFT System
+<div class="project-meta">Kronos Research · Dec 2025 – Feb 2026</div>
+
+High-frequency trading infrastructure and alpha research for prediction markets.
+
+- Researched and validated alpha signals with market microstructure analysis and performance diagnostics
+- Built Rust/Python components for data recording, replay, backtesting, and paper/live trading
+- Integrated on-chain and alternative data pipelines for signal generation and risk monitoring
+
+<div class="tech-tags">
+<span class="tech-tag">Rust</span>
 <span class="tech-tag">Python</span>
 <span class="tech-tag">HFT</span>
 <span class="tech-tag">Prediction Markets</span>
-<span class="tech-tag">On-chain Data</span>
 </div>
 </div>
 
 <div class="project-card">
 
-### Exotic Options Pricing & Trading Strategy
+### Polymarket Pricing & Trading Signals
 <div class="project-meta">Algobeats · May 2024 – Aug 2025</div>
 
-End-to-end options research: from pricing model to live trading.
+Pricing and monitoring framework for binary-option products in prediction markets.
 
-- Implemented exotic options pricing models for digital asset markets
-- Developed a strategy exploiting pricing inefficiencies in crypto derivatives
-- Achieved over **200% annualized return** in live trading
-
-<!-- Replace the line below with your actual image when ready -->
-<!-- <div class="project-img"><img src="/images/options-pnl.png" alt="Options Strategy PnL"></div> -->
+- Modeled and priced Polymarket products using binary-option pricing frameworks
+- Developed and monitored strategies based on valuation and risk signals
+- Supported live research iteration through signal testing and execution diagnostics
 
 <div class="tech-tags">
 <span class="tech-tag">Python</span>
-<span class="tech-tag">Options Pricing</span>
-<span class="tech-tag">Crypto Derivatives</span>
-<span class="tech-tag">Live Trading</span>
+<span class="tech-tag">Binary Options</span>
+<span class="tech-tag">Polymarket</span>
+<span class="tech-tag">Risk Signals</span>
 </div>
 </div>
 
 <div class="project-card">
 
-### CTA Strategy Backtesting Framework
+### Signal Testing & Strategy Research Framework
 <div class="project-meta">Algobeats · May 2024 – Aug 2025</div>
 
-A systematic backtesting engine for CTA strategies with granular data analysis.
+A systematic framework for high-frequency and medium-frequency crypto strategy research.
 
-- Tick-level microstructure feature extraction and latency profiling
-- Modular backtest pipeline supporting multiple strategy types
-- Statistical analysis toolkit for trading data exploration
-
-<!-- Replace the line below with your actual image when ready -->
-<!-- <div class="project-img"><img src="/images/cta-backtest.png" alt="CTA Backtest Results"></div> -->
+- Built signal-testing tools on the firm's high-frequency trading system
+- Supported tick-level analysis and execution diagnostics
+- Contributed to backtesting and paper-trading frameworks for cross-sectional and time-series strategies
 
 <div class="tech-tags">
 <span class="tech-tag">Python</span>
 <span class="tech-tag">Backtesting</span>
-<span class="tech-tag">Microstructure</span>
-<span class="tech-tag">CTA</span>
+<span class="tech-tag">Tick Data</span>
+<span class="tech-tag">Paper Trading</span>
 </div>
 </div>
 
@@ -80,41 +109,16 @@ A systematic backtesting engine for CTA strategies with granular data analysis.
 ### Blockchain Data Factor Market Research
 <div class="project-meta">Renmin University of China · National R&D Project · Jul 2023 – Mar 2024</div>
 
-Game-theoretic analysis of data property rights in blockchain markets.
+Game-theoretic analysis of data-property-right allocation in blockchain markets.
 
-- Proposed a Bayesian game framework for data property rights allocation
-- Demonstrated welfare gains from assigning rights to high-value-growth entities
-- Comprehensive literature review on blockchain and macroeconomic modeling paradigms
-
-<!-- Replace the line below with your actual image when ready -->
-<!-- <div class="project-img"><img src="/images/blockchain-game.png" alt="Bayesian Game Framework"></div> -->
+- Led literature review on blockchain and data factor markets
+- Synthesized macroeconomic and mechanism-design models for research stakeholders
+- Proposed a Bayesian game framework to evaluate welfare effects under heterogeneous growth assumptions
 
 <div class="tech-tags">
 <span class="tech-tag">Game Theory</span>
 <span class="tech-tag">Blockchain</span>
 <span class="tech-tag">Bayesian Games</span>
 <span class="tech-tag">Policy Research</span>
-</div>
-</div>
-
-<div class="project-card">
-
-### Hydrogen-Powered Vehicle Big Data Platform
-<div class="project-meta">Tsinghua University · Jun 2021 – Aug 2021</div>
-
-Real-time sensor data platform for hydrogen-powered vehicle fleet.
-
-- Migrated vehicle simulation models from MATLAB to Python
-- Processed large-scale sensor data using Hadoop MapReduce
-- Built interactive statistical visualization dashboards
-
-<!-- Replace the line below with your actual image when ready -->
-<!-- <div class="project-img"><img src="/images/hydrogen-dashboard.png" alt="Vehicle Data Dashboard"></div> -->
-
-<div class="tech-tags">
-<span class="tech-tag">Python</span>
-<span class="tech-tag">MATLAB</span>
-<span class="tech-tag">Hadoop</span>
-<span class="tech-tag">Data Visualization</span>
 </div>
 </div>
