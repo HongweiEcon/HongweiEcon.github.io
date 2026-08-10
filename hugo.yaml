@@ -13,7 +13,7 @@ minify:
 
 params:
   env: production
-  description: "Quantitative Research Associate Intern | QED Trading | NYU"
+  description: "Quantitative Economics Master's Student | NYU | Quantitative Research"
   author: "Hongwei Zhong"
   keywords: ["quantitative research", "crypto", "machine learning", "trading", "NYU"]
 
@@ -32,9 +32,9 @@ params:
     enabled: true
     title: "Hongwei Zhong (钟鸿蔚)"
     subtitle: >
-      Quantitative Research Associate Intern at QED Trading<br>
+      Quantitative Research · Crypto ML Signals · Systematic Trading<br>
       Master in Quantitative Economics at [NYU](https://as.nyu.edu/departments/econ.html)<br>
-      Crypto ML Signals · Systematic Trading · Research Engineering
+      Research Engineering · Machine Learning · Crypto Markets
     imageUrl: "profile.png"
     imageWidth: 200
     imageHeight: 200

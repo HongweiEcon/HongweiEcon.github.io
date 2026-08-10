@@ -23,10 +23,10 @@ hidemeta: true
 ## 💼 Work Experience
 
 **QED Trading** — Florida, U.S.A.
-*Quantitative Research Associate Intern* | May 2026 – Present
-- Owned engineering improvements to quantitative research pipelines, including asset-history handling, missing-data handling, strategy configuration updates, and test expansion for reliable backtests.
+*Quantitative Research Associate Intern* | May 2026 – Aug 2026
+- Owned engineering improvements to quantitative research pipelines, fixing asset-history and missing-data handling, updating strategy configurations, and expanding tests for reliable backtests.
 - Developed modular Python components for a daily crypto ML signal framework, integrating boosting models, cross-asset features, diagnostics, and signal-accuracy evaluation.
-- Established an AI-assisted development workflow using structured prompts, iterative code review, failure-mode analysis, and test refinement to ship maintainable research-engineering changes.
+- Established an AI-assisted development workflow for research engineering, using structured prompts, iterative code review, failure-mode analysis, and test refinement to ship maintainable changes.
 
 **Kronos Research** — Remote
 *Quantitative Researcher Intern* | Dec 2025 – Feb 2026
@@ -51,7 +51,7 @@ hidemeta: true
 
 **Best Graduation Thesis Award** — Central University of Finance and Economics, May 2024
 - *Verifier's Dilemma: A Game-Theoretic Analysis of Blockchain Layer-2 Scaling Solutions*
-- Incorporated game-theoretic modeling to analyze the incentives and challenges of blockchain layer-2 solutions.
+- Applied game-theoretic modeling to analyze validator incentive structures in blockchain layer-2 scaling solutions.
 
 **Outstanding Paper in the Conference of Evolutionary Game Theory and AI** — Beihang University, Jul 2023
 - Reported on the "Public Welfare Analysis Based on Multiplied Dictator Game and Ultimatum Game".

@@ -12,12 +12,12 @@ hidemeta: true
 <div class="project-card">
 
 ### Daily Crypto ML Signal Framework
-<div class="project-meta">QED Trading · May 2026 – Present</div>
+<div class="project-meta">QED Trading · May 2026 – Aug 2026</div>
 
 Modular research framework for daily crypto signals and model diagnostics.
 
 - Integrated boosting models, cross-asset features, diagnostics, and signal-accuracy evaluation
-- Improved quantitative research pipelines for asset histories, missing-data handling, and reliable backtests
+- Fixed asset-history and missing-data handling, updated strategy configurations, and expanded tests for reliable backtests
 - Expanded tests and strategy configuration coverage for maintainable research iteration
 
 <div class="tech-tags">
@@ -31,11 +31,11 @@ Modular research framework for daily crypto signals and model diagnostics.
 <div class="project-card">
 
 ### AI-assisted Research Engineering Workflow
-<div class="project-meta">QED Trading · May 2026 – Present</div>
+<div class="project-meta">QED Trading · May 2026 – Aug 2026</div>
 
 Structured development workflow for shipping robust quantitative research code.
 
-- Used structured prompts, iterative code review, and failure-mode analysis for research-engineering tasks
+- Used structured prompts, iterative code review, and failure-mode analysis for research engineering
 - Refined tests alongside implementation changes to catch data and strategy edge cases
 - Applied the workflow to pipeline fixes, model components, and configuration updates
 
