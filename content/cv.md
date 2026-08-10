@@ -7,7 +7,7 @@ ShowReadingTime: false
 hidemeta: true
 ---
 
-## 🎓 Education
+## Education
 
 **New York University** — New York, U.S.A.
 *Master in Quantitative Economics* | Sep 2025 – Dec 2026
@@ -20,7 +20,7 @@ hidemeta: true
 
 ---
 
-## 💼 Work Experience
+## Work Experience
 
 **QED Trading** — Florida, U.S.A.
 *Quantitative Research Associate Intern* | May 2026 – Aug 2026
@@ -47,7 +47,7 @@ hidemeta: true
 
 ---
 
-## 🏆 Selected Honors & Awards
+## Selected Honors & Awards
 
 **Best Graduation Thesis Award** — Central University of Finance and Economics, May 2024
 - *Verifier's Dilemma: A Game-Theoretic Analysis of Blockchain Layer-2 Scaling Solutions*
@@ -58,7 +58,7 @@ hidemeta: true
 
 ---
 
-## 🛠 Skills & Languages
+## Skills & Languages
 
 **Languages**
 
@@ -83,10 +83,10 @@ hidemeta: true
 
 ---
 
-## 🎵 Interests
+## Interests
 
 Swimming · Reading Non-fiction · Jazz Music
 
 ---
 
-<a href="/files/cv-quant.pdf" class="cv-download">📄 Download CV (PDF)</a>
+<a href="/files/cv-quant.pdf" class="cv-download">Download CV (PDF)</a>

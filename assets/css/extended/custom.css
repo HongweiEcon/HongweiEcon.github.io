@@ -6,30 +6,36 @@
 /* --- Typography --- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* --- Color Accents --- */
 :root {
-    --accent: #2b6cb0;
-    --accent-dark: #1a365d;
-    --accent-light: #4299e1;
-    --accent-bg: rgba(43, 108, 176, 0.08);
-    --tag-bg: #edf2f7;
-    --tag-text: #2d3748;
-    --subtle-bg: #f7fafc;
-    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    --accent: #2f6f73;
+    --accent-dark: #244f52;
+    --accent-light: #6fa5a7;
+    --accent-warm: #9a5a2e;
+    --accent-bg: rgba(47, 111, 115, 0.08);
+    --tag-bg: rgba(47, 111, 115, 0.08);
+    --tag-text: #244f52;
+    --subtle-bg: #fbfaf7;
+    --paper-bg: rgba(255, 255, 255, 0.62);
+    --card-shadow: 0 10px 30px rgba(30, 37, 37, 0.06);
 }
 
 :root[data-theme="dark"] {
-    --accent: #63b3ed;
-    --accent-dark: #90cdf4;
-    --accent-light: #4299e1;
-    --accent-bg: rgba(99, 179, 237, 0.1);
-    --tag-bg: rgba(99, 179, 237, 0.15);
-    --tag-text: #e2e8f0;
-    --subtle-bg: #1e2028;
-    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    --accent: #8bc8c3;
+    --accent-dark: #bde3df;
+    --accent-light: #67aaa6;
+    --accent-warm: #d6a16f;
+    --accent-bg: rgba(139, 200, 195, 0.1);
+    --tag-bg: rgba(139, 200, 195, 0.13);
+    --tag-text: #d8efed;
+    --subtle-bg: #20211f;
+    --paper-bg: rgba(31, 32, 30, 0.55);
+    --card-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
 }
 
 /* --- Layout Width --- */
@@ -40,7 +46,8 @@ body {
 
 /* --- Background: Subtle gradient for visual depth --- */
 body {
-    background: linear-gradient(160deg, var(--theme) 0%, var(--subtle-bg) 50%, var(--theme) 100%);
+    background:
+        linear-gradient(180deg, var(--theme) 0%, var(--subtle-bg) 52%, var(--theme) 100%);
     background-attachment: fixed;
 }
 
@@ -86,14 +93,15 @@ body {
 
 .profile h1 {
     margin-top: 16px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 650;
+    letter-spacing: 0;
 }
 
 /* Profile subtitle: clean line-by-line */
 .profile .profile_inner > span {
-    line-height: 2;
-    font-size: 0.95rem;
+    line-height: 1.85;
+    font-size: 0.98rem;
     color: var(--secondary);
     max-width: 520px;
     display: inline-block;
@@ -133,20 +141,64 @@ body {
 
 /* --- Post/Page content with subtle card background --- */
 .post-single .post-content {
-    background: var(--entry);
-    border-radius: 12px;
-    padding: 32px 36px;
-    box-shadow: var(--card-shadow);
-    margin-top: 16px;
+    background: transparent;
+    border-radius: 0;
+    padding: 14px 2px 28px;
+    box-shadow: none;
+    margin-top: 12px;
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size: 1.04rem;
+    line-height: 1.72;
+}
+
+.post-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 2.18rem;
+    font-weight: 650;
+    letter-spacing: 0;
+}
+
+.post-content p {
+    margin-bottom: 0.72rem;
+}
+
+.post-content strong {
+    color: var(--primary);
+    font-weight: 650;
+}
+
+.post-content em {
+    color: var(--secondary);
+    font-style: normal;
+}
+
+.post-content ul {
+    margin-top: 0.35rem;
+    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+}
+
+.post-content li {
+    margin-bottom: 0.3rem;
+    padding-left: 0.15rem;
+}
+
+.post-content li::marker {
+    color: var(--accent-warm);
 }
 
 /* --- Section Headings with Left Border --- */
 .post-content h2 {
-    border-left: 4px solid var(--accent);
-    padding-left: 12px;
-    margin-top: 2em;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    border-left: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    padding: 0 0 7px;
+    margin-top: 1.8em;
+    margin-bottom: 0.85em;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.93rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
 
 /* First h2 doesn't need extra top margin inside card */
@@ -158,24 +210,24 @@ body {
 .post-content hr {
     border: none;
     height: 1px;
-    background: linear-gradient(to right, var(--accent), transparent);
-    margin: 2em 0;
+    background: color-mix(in srgb, var(--border) 78%, transparent);
+    margin: 1.55em 0;
 }
 
 /* --- Project Cards --- */
 .project-card {
-    background: var(--theme);
+    background: var(--paper-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin-bottom: 24px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden;
 }
 
 .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+    box-shadow: var(--card-shadow);
 }
 
 :root[data-theme="dark"] .project-card:hover {
@@ -184,15 +236,21 @@ body {
 
 .project-card h3 {
     margin-top: 0;
+    margin-bottom: 4px;
     color: var(--primary);
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.28rem;
+    font-weight: 650;
+    line-height: 1.25;
 }
 
 .project-card .project-meta {
-    color: var(--secondary);
-    font-size: 0.88rem;
-    margin-bottom: 12px;
+    color: var(--accent-warm);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-bottom: 13px;
+    text-transform: uppercase;
 }
 
 .project-card p {
@@ -222,12 +280,12 @@ body {
 /* Project highlights list */
 .project-card ul {
     margin: 8px 0 12px;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .project-card ul li {
-    margin-bottom: 4px;
-    line-height: 1.6;
+    margin-bottom: 5px;
+    line-height: 1.62;
     color: var(--content);
 }
 
@@ -259,19 +317,20 @@ body {
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 12px;
+    gap: 7px;
+    margin-top: 14px;
 }
 
 .tech-tag {
     display: inline-block;
     background: var(--tag-bg);
     color: var(--tag-text);
-    padding: 3px 10px;
-    border-radius: 14px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0;
 }
 
 /* --- Skill Tags (CV page) --- */
@@ -286,11 +345,12 @@ body {
     display: inline-block;
     background: var(--accent-bg);
     color: var(--accent);
-    padding: 4px 12px;
-    border-radius: 16px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid var(--accent);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 /* --- CV Download Button --- */
@@ -303,6 +363,7 @@ body {
     padding: 9px 22px;
     border-radius: 6px;
     border: 1.5px solid var(--accent);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -312,8 +373,7 @@ body {
 .cv-download:hover {
     background: var(--accent);
     color: #fff !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.25);
+    box-shadow: 0 6px 18px rgba(47, 111, 115, 0.22);
 }
 
 /* --- Social Icons --- */
@@ -333,6 +393,7 @@ html {
 /* --- Nav --- */
 .nav {
     font-weight: 500;
+    letter-spacing: 0;
 }
 
 .menu a:hover {
@@ -341,25 +402,27 @@ html {
 
 /* --- Research page cards --- */
 .research-area {
-    background: var(--theme);
+    background: var(--paper-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--accent);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    border-left: 3px solid var(--accent);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .research-area:hover {
-    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
     box-shadow: var(--card-shadow);
 }
 
 .research-area h3 {
     margin-top: 0;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size: 1.1rem;
+    margin-bottom: 6px;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 650;
+    font-size: 1.24rem;
+    line-height: 1.28;
 }
 
 .research-area p {
@@ -380,13 +443,16 @@ html {
 /* Research sub-label */
 .research-label {
     display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--accent);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent-warm);
     background: var(--accent-bg);
-    padding: 2px 10px;
-    border-radius: 10px;
+    padding: 3px 9px;
+    border-radius: 6px;
     margin-bottom: 10px;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
 
 /* Remove h2 left border inside cards to avoid double border */
@@ -399,10 +465,10 @@ html {
 
 /* --- Page intro text --- */
 .page-intro {
-    font-size: 1rem;
+    font-size: 1.08rem;
     color: var(--secondary);
-    margin-bottom: 2em;
-    line-height: 1.7;
+    margin-bottom: 1.65em;
+    line-height: 1.65;
 }
 
 /* --- Footer styling --- */
@@ -413,8 +479,8 @@ html {
 /* --- Responsive: Mobile --- */
 @media (max-width: 768px) {
     .post-single .post-content {
-        padding: 20px 18px;
-        border-radius: 8px;
+        padding: 10px 0 24px;
+        font-size: 1rem;
     }
 
     .project-card {
@@ -423,6 +489,14 @@ html {
 
     .research-area {
         padding: 16px 14px;
+    }
+
+    .post-title {
+        font-size: 1.82rem;
+    }
+
+    .post-content h2 {
+        font-size: 0.86rem;
     }
 
     .profile .buttons .button {

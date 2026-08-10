@@ -11,7 +11,7 @@ hidemeta: true
 
 <div class="research-area">
 
-### 📈 Crypto ML Signals
+### Crypto ML Signals
 <span class="research-label">Active Research</span>
 
 Developing daily signal frameworks for crypto markets with cross-asset features and model diagnostics.
@@ -30,7 +30,7 @@ Developing daily signal frameworks for crypto markets with cross-asset features 
 
 <div class="research-area">
 
-### ⚙️ Research Engineering
+### Research Engineering
 <span class="research-label">Active Research</span>
 
 Building maintainable quantitative research infrastructure from data pipelines to test coverage.
@@ -49,7 +49,7 @@ Building maintainable quantitative research infrastructure from data pipelines t
 
 <div class="research-area">
 
-### 📊 Prediction Markets & Trading Systems
+### Prediction Markets & Trading Systems
 
 Researching prediction-market alpha and building high-frequency infrastructure for systematic trading.
 
@@ -67,7 +67,7 @@ Researching prediction-market alpha and building high-frequency infrastructure f
 
 <div class="research-area">
 
-### 🔗 Blockchain Economics & Game Theory
+### Blockchain Economics & Game Theory
 
 Game-theoretic analysis of incentive structures in blockchain and data-factor markets.
 
