@@ -2,3 +2,6 @@ public/
 resources/
 .hugo_build.lock
 .DS_Store
+
+# 明文的受保护文件（只提交 static/files/*.enc 密文）
+private/

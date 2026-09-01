@@ -1,0 +1,153 @@
+{{- $src := .Get "src" -}}
+{{- $name := .Get "name" | default "download.pdf" -}}
+{{- $type := .Get "type" | default "application/pdf" -}}
+{{- $label := .Get "label" | default "Download" -}}
+{{- $hint := .Get "hint" -}}
+<div class="locked-file" data-src="{{ $src | relURL }}" data-name="{{ $name }}" data-type="{{ $type }}">
+  <form class="locked-file__form" autocomplete="off">
+    <input type="password" class="locked-file__input" placeholder="Password" aria-label="Password" autocomplete="off" spellcheck="false">
+    <button type="submit" class="locked-file__submit">Unlock</button>
+  </form>
+  {{- with $hint }}
+  <p class="locked-file__hint">{{ . }}</p>
+  {{- end }}
+  <p class="locked-file__status" role="status" aria-live="polite"></p>
+  <div class="locked-file__result" hidden>
+    <div class="locked-file__actions">
+      <a class="locked-file__download cv-download" download="{{ $name }}">{{ $label }}</a>
+      <a class="locked-file__open cv-download" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+    <iframe class="locked-file__preview" title="{{ $name }}"></iframe>
+  </div>
+</div>
+{{- /* The theme calls footer.html through partialCached with a key that ignores the
+       page, so this script cannot live in extend_footer.html - it would leak onto
+       every other single page. Emit it here instead, once per page. */ -}}
+{{- if not (.Page.Scratch.Get "lockedFileScript") }}
+{{- .Page.Scratch.Set "lockedFileScript" true }}
+<script>
+(function () {
+  var MAGIC = "HWLK";
+  var HEADER = 9;
+  var SALT_LEN = 16;
+  var IV_LEN = 12;
+
+  function parse(buffer) {
+    var view = new DataView(buffer);
+    var magic = "";
+    for (var i = 0; i < 4; i++) magic += String.fromCharCode(view.getUint8(i));
+    if (magic !== MAGIC) throw new Error("unrecognised container");
+    if (view.getUint8(4) !== 1) throw new Error("unsupported container version");
+    return {
+      iterations: view.getUint32(5),
+      salt: new Uint8Array(buffer, HEADER, SALT_LEN),
+      iv: new Uint8Array(buffer, HEADER + SALT_LEN, IV_LEN),
+      body: new Uint8Array(buffer, HEADER + SALT_LEN + IV_LEN)
+    };
+  }
+
+  function decrypt(buffer, password) {
+    var meta = parse(buffer);
+    return crypto.subtle
+      .importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"])
+      .then(function (material) {
+        return crypto.subtle.deriveKey(
+          { name: "PBKDF2", salt: meta.salt, iterations: meta.iterations, hash: "SHA-256" },
+          material,
+          { name: "AES-GCM", length: 256 },
+          false,
+          ["decrypt"]
+        );
+      })
+      .then(function (key) {
+        return crypto.subtle.decrypt({ name: "AES-GCM", iv: meta.iv }, key, meta.body);
+      });
+  }
+
+  function init(root) {
+    if (root.getAttribute("data-ready")) return;
+    root.setAttribute("data-ready", "1");
+
+    var form = root.querySelector(".locked-file__form");
+    var input = root.querySelector(".locked-file__input");
+    var submit = root.querySelector(".locked-file__submit");
+    var status = root.querySelector(".locked-file__status");
+    var result = root.querySelector(".locked-file__result");
+    var download = root.querySelector(".locked-file__download");
+    var openLink = root.querySelector(".locked-file__open");
+    var preview = root.querySelector(".locked-file__preview");
+    var cipher = null;
+    var objectUrl = null;
+
+    function say(message, state) {
+      status.textContent = message;
+      status.setAttribute("data-state", state || "");
+    }
+
+    if (!window.crypto || !crypto.subtle) {
+      form.hidden = true;
+      say("This browser cannot decrypt the file. Open the page over HTTPS in a current browser.", "error");
+      return;
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var password = input.value;
+      if (!password) {
+        say("Enter the password.", "error");
+        return;
+      }
+      submit.disabled = true;
+      say("Decrypting…", "busy");
+
+      var loaded = cipher
+        ? Promise.resolve(cipher)
+        : fetch(root.getAttribute("data-src")).then(function (response) {
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            return response.arrayBuffer();
+          });
+
+      loaded
+        .then(function (buffer) {
+          cipher = buffer;
+          return decrypt(buffer, password).catch(function () {
+            throw new Error("bad-password");
+          });
+        })
+        .then(function (plain) {
+          if (objectUrl) URL.revokeObjectURL(objectUrl);
+          objectUrl = URL.createObjectURL(new Blob([plain], { type: root.getAttribute("data-type") }));
+          download.href = objectUrl;
+          openLink.href = objectUrl;
+          preview.src = objectUrl;
+          result.hidden = false;
+          form.hidden = true;
+          say("Unlocked.", "ok");
+        })
+        .catch(function (error) {
+          if (error && error.message === "bad-password") {
+            say("Wrong password. Please try again.", "error");
+            input.select();
+          } else {
+            say("Could not load the file. Please try again later.", "error");
+          }
+        })
+        .then(function () {
+          submit.disabled = false;
+        });
+    });
+  }
+
+  function start() {
+    var nodes = document.querySelectorAll(".locked-file");
+    for (var i = 0; i < nodes.length; i++) init(nodes[i]);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();
+</script>
+{{- end }}

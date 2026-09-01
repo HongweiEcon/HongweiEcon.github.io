@@ -84,3 +84,5 @@ My academic work uses game theory and mechanism design to analyze incentives in 
 <span class="tech-tag">Bayesian Games</span>
 </div>
 </div>
+
+<p class="talk-slides"><a href="/slides/" class="cv-download">Talk Slides</a></p>
